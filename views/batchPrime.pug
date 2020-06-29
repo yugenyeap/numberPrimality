@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= 'Batch Prime Calculations'
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  body
+    h2.class.text-center  The following numbers primality are listed below:
+    each index, index2 in response
+      h1.class.text-center #{query[index2]} : #{index}
+    h3.class.text-center  Result retrieved from #{source}
+    div(style='text-align:center')
+      a(href='/', class='btn btn-primary btn-lg') Back to Homepage

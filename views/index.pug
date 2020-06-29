@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  body
+    h1.class.text-center  Welcome to the Prime Number Calculator!
+    h2.class.text-center  Select from a list of calculations to perform on a number:
+    class.d-flex.justify-content-center(style='padding: 10px;')
+      form(action='/isPrime?', method='GET', style='text-align:center')
+        | Enter a number to see if it is prime:
+        br
+        input(type='number', name='number', min='0')
+        br
+        input(type='submit', value='Is this Prime?')
+    class.d-flex.justify-content-center(style='padding: 10px;')
+      form(action='/orderPrime?', method='GET', style='text-align:center')
+        | Enter a number to see what ordered prime number it is:
+        br
+        input(type='number', name='number', min='0')
+        br
+        input(type='submit', value='Which Order Prime?')
+    class.d-flex.justify-content-center(style='padding: 10px;')
+      form(action='/nextPrime?', method='GET', style='text-align:center')
+        | Enter a number to see which number after it, is prime:
+        br
+        input(type='number', name='number', min='0')
+        br
+        input(type='submit', value='Next Prime?')
+    class.d-flex.justify-content-center(style='padding: 10px;')
+      form(action='/factorise?', method='GET', style='text-align:center')
+        | Enter a number to see it's factors:
+        br
+        input(type='number', name='number', min='0')
+        br
+        input(type='submit', value='Factorise')
+    class.d-flex.justify-content-center(style='padding: 10px;')
+      form(action='/batchPrime?', method='GET', style='text-align:center')
+        | Enter a list of numbers separated by a comma to see if they are prime:
+        br
+        input(type='text', name='list', min='0')
+        br
+        input(type='submit', value='Batch Primes')

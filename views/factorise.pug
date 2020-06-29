@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= 'Factorise'
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  body
+    h2.class.text-center  The factors of #{query} are:
+    each index in response
+      h1.class.text-center #{index[0]} and #{index[1]}
+    h3.class.text-center  Result retrieved from #{source}
+    div(style='text-align:center')
+      a(href='/', class='btn btn-primary btn-lg') Back to Homepage
